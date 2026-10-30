@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gomitas Enchiladas</title>
+
+    <style>
+        body {
+            background-color: #181818;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            background-color: #e63946;
+            padding: 25px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 25px;
+        }
+
+        .producto {
+            background-color: #292929;
+            border: 2px solid #ff4747;
+            border-radius: 15px;
+            padding: 20px;
+            width: 260px;
+        }
+
+        .producto h3 {
+            color: #ff4747;
+        }
+
+        .producto img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #b91d2a;
+        }
+
+        footer {
+            padding: 20px;
+            color: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🍬 Gomitas Enchiladas</h1>
+        <p>¡El antojo que te encanta!</p>
+    </header>
+
+    <h2>Nuestros productos</h2>
+
+    <div class="contenedor">
+
+        <div class="producto">
+            <img src="gomitas.jpg" alt="Gomitas enchiladas">
+
+            <h3>Gomitas enchiladas</h3>
+            <p>Deliciosas gomitas con chamoy y Tajín.</p>
+            <p><strong>Precio: $4.000</strong></p>
+
+            <button onclick="pedir('Gomitas enchiladas', '4000')">
+                Quiero comprar
+            </button>
+        </div>
+
+        <div class="producto">
+            <img src="gomitas.jpg" alt="Gomitas especiales">
+
+            <h3>Gomitas especiales</h3>
+            <p>Una mezcla deliciosa para disfrutar.</p>
+            <p><strong>Precio: $5.000</strong></p>
+
+            <button onclick="pedir('Gomitas especiales', '5000')">
+                Quiero comprar
+            </button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>¡Gracias por visitar nuestra tienda! ❤️</p>
+    </footer>
+
+    <script>
+        function pedir(producto, precio) {
+            let mensaje = "Hola, quiero pedir " + producto +
+                          ". Precio: $" + precio;
+
+            let numero = "573228430453";
+            let enlace = "https://wa.me/" + numero +
+                         "?text=" + encodeURIComponent(mensaje);
+
+            window.open(enlace, "_blank");
+        }
+    </script>
+
+</body>
+</html>
